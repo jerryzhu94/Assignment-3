@@ -14,9 +14,10 @@ Code smells
 
 Refactor
 
-•	Member fields were renamed. Use of acronyms were avoidable because code needs to be readable for other developers
-•	Member fields were explicitly defined as private for improved readability and moved to the bottom of the class. The public methods were defined near the top of the class because developers are usually more interested in API calls.
-•	initializeGUIComponent helper class was made to improve readibility in the SimpleNotePad constructor.
-•	addMenusToMenuBar and addMenuItemsToMenu helper classes were added to improve extensibility and readability. This reduces the amount of code duplication.
-•	Business logic in the actionPerformed method was partitioned into several separate Command classes. The command design pattern was used to encapsulate GUI behaviors as objects. In the future, there may be buttons that have the same or similar behaviors. For example, on word document there are multiple menu items and buttons for saving a document. Isolating the behaviors from the component allows for code reusability. This pattern also enforces the single responsibility principle: every class should have responsibility over a single component or functionality. This significantly improves the overall cohesion. This pattern also enforces the open/close principle: Open for extensions but closed for modification. To introduce a new GUI behavior, a new command class needs to get created and then attached to the command interface. Any code changes will have minimal impact on other classes. 
+1.  Member fields were renamed. Use of acronyms were avoidable because code needs to be readable for other developers
 
+2.  Member fields were explicitly defined as private for improved readability and moved to the bottom of the class. The public methods were defined near the top of the class because developers are usually more interested in API calls. initializeGUIComponent helper class was made to improve readibility in the SimpleNotePad constructor.
+
+3.  addMenusToMenuBar and addMenuItemsToMenu helper classes were added to improve extensibility and readability. This reduces the amount of code duplication.
+
+4.  Business logic in the actionPerformed method was partitioned into several separate Command classes. The command design pattern was used to encapsulate GUI behaviors as objects. In the future, there may be buttons that have the same or similar behaviors. For example, on word document there are multiple menu items and buttons for saving a document. Isolating the behaviors from the component allows for code reusability. This pattern also enforces the single responsibility principle: every class should have responsibility over a single component or functionality. This significantly improves the overall cohesion. This pattern also enforces the open/close principle: Open for extensions but closed for modification. To introduce a new GUI behavior, a new command class needs to get created and then attached to the command interface. Any code changes will have minimal impact on other classes. 
