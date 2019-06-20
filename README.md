@@ -1,4 +1,4 @@
-# Assignment-3
+# SimpleNotePad
 Refactored SimpleNotePad application. Command design pattern was used to dynamically attach behavior to GUI components.
 
 
